@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root {
+    --RED: hsl(0, 36%, 70%);
+    --SOFT-RED: hsl(0, 93%, 68%);
+    --DARK-RED: hsl(0, 6%, 24%);
+    font-size: 62.5%;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+/* RESET */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* GENERAL STYLING */
+
+body {
+    display: grid;
+    width: 100%;
+    font-size: 1.6rem;
+    background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    color: var(--DARK-RED);
+    line-height: 4rem;
+    font-weight: 700;
+    letter-spacing: 1rem;
+    text-align: center;
+    padding: 2.5rem 2.5rem 1.5rem 2.5rem;
+}
+
+p {
+    max-width: 450px;
+    color: var(--RED);
+    line-height: 2rem;
+    padding: 2rem 1rem 4rem 1rem;
+    text-align: center;
+}
+
+span {
+    color: var(--RED);
+    font-weight: 300;
+    display: block;
+}
+
+header {
+    height: auto;
+    padding: 2.5rem;
+  }
+  
+  header img {
+    width: 100px;    
+  }
+  
+/* .container form input { */
+input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    left: 0;
+    top: 0;
+    border: 1px solid var(--RED);
+    background: transparent;
+    padding-left: 3rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.5rem;
+}
+    
+input:focus {
+    border: 2px solid var(--RED);
+    outline: none;
+}
+
+input::placeholder {
+    color: var(--RED);
+    opacity: 0.5;
+}
+
+/* COMPONENTS */
+
+.container {
+    background-color: white;
+    display: flex;
+    flex-direction: column-reverse;
+    background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%)); 
+}
+
+.container-left {
+    width: 100%;
+    height: auto;
+    padding: 2.5rem 2.5rem 15rem 2.5rem;
+}
+
+.logo {
+    width: 150px;
+}
+
+.container-right {
+    width: 100%;
+    height: 300px;
+    background-image: url(../images/hero-mobile.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.container form {
+    position: relative;
+    display: block;
+    height: 50px;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container form .btn-submit {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 70px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    box-shadow:  0 0 18px 1px rgba(131, 101, 101, 0.3);
+}
+
+.container form button:hover {
+    background-image: linear-gradient (135deg,hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    box-shadow:  0 0 18px 1px rgba(131, 101, 101, 0.2);
+}
+
+.focus {
+	border: 2px solid red;
+	border-radius: 50px;
+}
+
+.alert-icon {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 8rem;
+    display: none;
+}
+
+.alert-error {
+	color: red;
+	margin-top: 0.5rem;
+	margin-left: 2rem;
+	text-align: left;
+    padding-top: 6rem;
+}
+
+.alert-success {
+	color: red;
+	margin-top: 0.5rem;
+	margin-left: 2rem;
+	text-align: left;
+    padding-top: 6rem;
+}
+
+@media only screen and (min-width: 768px) {
+    h1 {
+        font-size: 6.8rem;
+        line-height: 6.8rem;
+        letter-spacing: 1.6rem;
+        max-width: 40vw;
+        text-align: left;
+        padding: 0;
+    }
+
+    p {
+        font-size: 1.6rem;
+        max-width: 100%;
+        margin: 0;
+        padding: 1.5vw 0 2.8vw 0;
+        line-height: 2.8rem;
+        text-align: left;
+    }
+
+    header {
+        position: absolute;
+        padding: 8vh 0 0 18vh;
+        }
+        
+    header img {
+        width: 150px;
+    }
+        
+    
+    .btn-submit {
+        width: 100%;
+    }
+
+    .container form {
+        margin-left: 0;
+        max-width: 100%;
+        height: 57px;
+    }
+
+    .container form .btn-submit {
+        width: 100px;
+    }
+
+    .container {
+        flex-direction: row;
+        padding-top: 0;
+        padding-bottom: 0;
+        justify-content: center;
+    }
+
+    .container-left {
+        height: 100vh;
+        width: 100%;
+        padding: 29vh 14vw 0 18vh;
+        background-image: url(../images/bg-pattern-desktop.svg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .container-right {
+        background-image: url(../images/hero-desktop.jpg);
+        width: 100%;
+        height: 100vh;
+    }
+
+    .alert-icon {
+        right: 12rem;
+    }
+}
